@@ -10,6 +10,6 @@
   </Link>
   <div class="flex items-center gap-3 text-sm">
     <span>{$profile?.name}</span>
-    <button onclick={logout} aria-label="Keluar" class="text-slate-500"><LogOut class="w-5 h-5" /></button>
+    <button onclick={logout} aria-label="Keluar" class="text-slate-600"><LogOut class="w-5 h-5" /></button>
   </div>
 </header>

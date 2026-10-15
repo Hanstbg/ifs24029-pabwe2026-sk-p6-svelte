@@ -20,7 +20,7 @@
 <Modal title="Ubah Link Tree" {onclose} onsubmit={submit} busy={$flags.change}>
   <input bind:value={$title} required class="w-full border rounded-lg px-3 py-2" />
   <textarea bind:value={$description} required class="w-full border rounded-lg px-3 py-2"></textarea>
-  <select bind:value={$type} class="w-full border rounded-lg px-3 py-2">
+  <select aria-label="Tipe link tree" bind:value={$type} class="w-full border rounded-lg px-3 py-2">
     <option value="public">Public</option>
     <option value="unlisted">Unlisted</option>
     <option value="private">Private</option>

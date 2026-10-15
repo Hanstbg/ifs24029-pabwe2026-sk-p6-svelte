@@ -34,7 +34,7 @@
 </script>
 
 {#if !ready}
-  <p class="p-8 text-center text-slate-500">Memuat...</p>
+  <main><h1 class="py-20 text-center text-base font-normal text-slate-600">Memuat...</h1></main>
 {:else if route.layout === "auth" && !$profile}
   <AuthLayout><Page /></AuthLayout>
 {:else if route.layout === "app" && $profile}

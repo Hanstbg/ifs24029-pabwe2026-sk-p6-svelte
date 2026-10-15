@@ -16,5 +16,5 @@
 </script>
 
 <Modal title="Ubah Sampul" {onclose} onsubmit={submit} busy={$flags.cover}>
-  <input type="file" accept="image/*" onchange={(e) => (file = e.target.files[0])} />
+  <input type="file" accept="image/*" aria-label="Pilih berkas sampul" onchange={(e) => (file = e.target.files[0])} />
 </Modal>

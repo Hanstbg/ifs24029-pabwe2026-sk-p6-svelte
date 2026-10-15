@@ -16,7 +16,7 @@ export async function apiFetch(path, { method = "GET", body, form } = {}) {
     payload = JSON.stringify(body);
   }
   try {
-    const res = await fetch(`${DELCOM_BASEURL}${path}`, { method, headers, body: payload });
+    const res = await fetch(`${DELCOM_API_URL}${path}`, { method, headers, body: payload });
     const json = await res.json();
     return { ok: json.status === "success", message: json.message, data: json.data };
   } catch {

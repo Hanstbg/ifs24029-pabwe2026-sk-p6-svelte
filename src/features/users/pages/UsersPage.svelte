@@ -13,7 +13,7 @@
   {#each users as u (u.id)}
     <li class="bg-white rounded-xl p-4 shadow-sm">
       <p class="font-semibold">{u.name}</p>
-      <p class="text-sm text-slate-500">{u.email}</p>
+      <p class="text-sm text-slate-600">{u.email}</p>
     </li>
   {/each}
 </ul>
