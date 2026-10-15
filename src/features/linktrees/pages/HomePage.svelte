@@ -51,7 +51,7 @@
 
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4 text-center">
   {#each Object.entries(stats) as [k, v] (k)}
-    <div class="bg-white rounded-xl p-3 shadow-sm"><p class="text-2xl font-bold">{v}</p><p class="text-xs capitalize text-slate-500">{k}</p></div>
+    <div class="bg-white rounded-xl p-3 shadow-sm"><p class="text-2xl font-bold">{v}</p><p class="text-xs capitalize text-slate-600">{k}</p></div>
   {/each}
 </div>
 
@@ -64,9 +64,9 @@
 </div>
 
 {#if $loading}
-  <p class="text-slate-500">Memuat...</p>
+  <p class="text-slate-600">Memuat...</p>
 {:else if filtered.length === 0}
-  <p class="text-slate-500">Tidak ada link tree.</p>
+  <p class="text-slate-600">Tidak ada link tree.</p>
 {:else}
   <ul class="grid gap-3 sm:grid-cols-2">
     {#each filtered as l (l.id)}
@@ -80,7 +80,7 @@
             {/if}
           </div>
           <p class="text-sm text-slate-600 line-clamp-2">{l.description}</p>
-          <p class="text-xs text-slate-400 mt-2">{`${l.type ?? "-"} • ${formatDate(l.created_at)}`}</p>
+          <p class="text-xs text-slate-600 mt-2">{`${l.type ?? "-"} • ${formatDate(l.created_at)}`}</p>
         </div>
       </li>
     {/each}

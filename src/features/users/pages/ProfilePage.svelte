@@ -39,7 +39,7 @@
 <div class="grid gap-6 md:grid-cols-2">
   <form onsubmit={saveData} class="bg-white rounded-xl p-5 shadow-sm space-y-3">
     {#if $profile?.photo}<img src={$profile.photo} alt="Foto profil" class="w-20 h-20 rounded-full object-cover" />{/if}
-    <input type="file" accept="image/*" onchange={savePhoto} class="text-sm" />
+    <input type="file" accept="image/*" aria-label="Unggah foto profil" onchange={savePhoto} class="text-sm" />
     <input bind:value={$name} placeholder="Nama" required class="w-full border rounded-lg px-3 py-2" />
     <input type="email" bind:value={$email} placeholder="Email" required class="w-full border rounded-lg px-3 py-2" />
     <button class="bg-indigo-600 text-white rounded-lg px-4 py-2 font-semibold">Simpan</button>
