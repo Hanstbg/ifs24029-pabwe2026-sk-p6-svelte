@@ -32,9 +32,9 @@
 </script>
 
 {#if $loading}
-  <p class="text-slate-500">Memuat...</p>
+  <p class="text-slate-600">Memuat...</p>
 {:else if !$linkTree}
-  <p class="text-slate-500">Link tree tidak ditemukan. <Link href="/" class="text-indigo-600">Kembali</Link></p>
+  <p class="text-slate-600">Link tree tidak ditemukan. <Link href="/" class="text-indigo-600">Kembali</Link></p>
 {:else}
   <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
     {#if $linkTree.cover}<img src={$linkTree.cover} alt={$linkTree.title} class="h-44 w-full object-cover" />{/if}
@@ -49,7 +49,7 @@
         {/if}
       </div>
       <p class="text-slate-600 mt-1">{$linkTree.description}</p>
-      <p class="text-xs text-slate-400 mt-1">{$linkTree.type}</p>
+      <p class="text-xs text-slate-600 mt-1">{$linkTree.type}</p>
     </div>
   </div>
 
@@ -73,7 +73,7 @@
         {/if}
       </li>
     {:else}
-      <li class="text-slate-500 text-sm">Belum ada tautan.</li>
+      <li class="text-slate-600 text-sm">Belum ada tautan.</li>
     {/each}
   </ul>
 

@@ -6,12 +6,12 @@ import { showSuccessDialog, showErrorDialog, showWarningDialog, showConfirmDialo
 beforeEach(() => vi.clearAllMocks());
 
 describe("toolsHelper", () => {
-  it("dialog sukses/error/peringatan", () => {
-    showSuccessDialog("a");
+  it("dialog sukses/error/peringatan", async () => {
+    await showSuccessDialog("a");
     expect(Swal.fire).toHaveBeenLastCalledWith(expect.objectContaining({ icon: "success", text: "a" }));
-    showErrorDialog("b");
+    await showErrorDialog("b");
     expect(Swal.fire).toHaveBeenLastCalledWith(expect.objectContaining({ icon: "error", text: "b" }));
-    showWarningDialog("c");
+    await showWarningDialog("c");
     expect(Swal.fire).toHaveBeenLastCalledWith(expect.objectContaining({ icon: "warning", text: "c" }));
   });
   it("konfirmasi", async () => {
