@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => {
         provider: "v8",
         reporter: ["text", "json", "html", "lcov"],
         include: ["src/**/*.{js,svelte}"],
-        exclude: ["src/main.js", "src/setupTests.js", "src/test-utils.js", "**/*.test.{js,jsx}", "node_modules/**", ".docs/**"],
+        exclude: ["src/main.js", "src/setupTests.js", "src/test-utils.js", "src/test-stub-icon.svelte", "**/*.test.{js,jsx}", "node_modules/**", ".docs/**"],
         thresholds: { lines: 100, functions: 100, branches: 100, statements: 100 },
       },
     },
